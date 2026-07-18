@@ -1,0 +1,86 @@
+body{
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #111;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: sans-serif;
+        }
+
+        .calculator{
+            display: grid;
+            grid-template-columns: repeat(4, 70px);
+            gap: 12px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        #display{
+            grid-column: 1 / -1;
+            height: 60px;
+            border-radius: 30px;
+            text-align: right;
+            padding-right: 20px;
+            font-size: 35px;
+            color: aliceblue;
+            background-color: rgba(143, 138, 138, 0.5);
+            border: none;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            width: auto;
+        }
+
+        button{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            font-size: 24px;
+            border: none;
+            background-color: rgba(200, 200, 200, 0.85);
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+        }
+        button:hover{
+            background-color: rgb(220, 220, 220);
+        }
+
+        .b{
+            background-color: rgb(230, 60, 50);
+            color: white;
+        }
+        .b:hover{
+            background-color: rgb(240, 90, 80);
+        }
+
+        .op{
+            background-color: rgb(225, 210, 235);
+        }
+        .op:hover{
+            background-color: rgb(235, 220, 245);
+        }
+
+        .c{
+            background-color: rgb(235, 160, 20);
+            color: white;
+        }
+        .c:hover{
+            background-color: rgb(245, 180, 50);
+        }
+
+        #historyPanel{
+            margin-top:20px;
+            color:white;
+            max-width:300px;
+            text-align:left;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        #historyList{
+            list-style:none;
+            padding:0;
+            max-height:200px;
+        }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="calculator.css">
+<body background="image1.png" onkeydown="handlekey(event)">
+    <script src="calculator.js" defer></script>
+    <div class="calculator">
+        <input type="text" id="display" class="displa" readonly>
+        <div class="buttons">
+        <button class="b" onclick="handleClear()" id="clearBtn">AC</button>
+        <button class="a" onclick="appendvalue('+/-')" >+/-</button>
+        <button class="a" onclick="appendvalue('%')" >%</button>
+        <button class="a" onclick="appendvalue('/')" >&divide;</button>
+  
+        <button class="a" onclick="appendvalue('7')">7</button>
+        <button class="a" onclick="appendvalue('8')">8</button>
+        <button class="a" onclick="appendvalue('9')">9</button>
+        <button class="a" onclick="appendvalue('*')">x</button>
+  
+        <button class="a" onclick="appendvalue('4')">4</button>
+        <button class="a" onclick="appendvalue('5')">5</button>
+        <button class="a" onclick="appendvalue('6')">6</button>
+        <button class="a" onclick="appendvalue('-')">-</button>
+
+        <button class="a" onclick="appendvalue('1')">1</button>
+        <button class="a" onclick="appendvalue('2')">2</button>
+        <button class="a" onclick="appendvalue('3')">3</button>
+        <button class="a" onclick="appendvalue('+')">+</button>
+   
+        <button class="a zero" onclick="appendvalue('0')">0</button>
+        <button class="a" onclick="appendvalue('.')">.</button>
+        <button class="c a" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <div id="historyPanel">
+        <h3>History <button onclick="clearHistoryUI()" style="font-size:12px;">Clear</button></h3>
+        <ul id="historyList"></ul>
+    </div>
+
+</body>
+</html>
