@@ -1,0 +1,71 @@
+:root{
+    --dial: #0f1a17;
+    --dial-edge: #1c2b26;
+    --brass: #c9a86a;
+    --brass-dim: #7d6b45;
+    --ivory: #ede6d3;
+    --red: #b5493f;
+    --bg-top: #05100d;
+    --bg-bottom: #0a1815;
+  }
+ 
+  *{ box-sizing: border-box; }
+ 
+html, body{
+    margin:0;
+    height:100%;
+    background: radial-gradient(ellipse at 50% 30%, var(--bg-bottom), var(--bg-top));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+    overflow:hidden;
+  }
+ 
+.stage{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:28px;
+    padding:20px;
+  }
+
+.numeral{
+    fill: var(--ivory);
+    font-size: 26px;
+    font-family: 'Iowan Old Style', Georgia, serif;
+    text-anchor:middle;
+    dominant-baseline:middle;
+    letter-spacing:1px;
+  }
+
+.digital{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+  }
+ 
+.digital-time{
+    font-family: 'SF Mono', 'Courier New', monospace;
+    font-size:22px;
+    color: var(--brass);
+    letter-spacing:4px;
+    text-shadow: 0 0 12px rgba(201,168,106,0.35);
+  }
+ 
+.digital-date{
+    font-family: 'SF Mono', 'Courier New', monospace;
+    font-size:11px;
+    color: var(--brass-dim);
+    letter-spacing:3px;
+    text-transform:uppercase;
+  }
+ 
+@media (prefers-reduced-motion: reduce){
+    .second-hand{ transition:none !important; }
+  }
+ 
+  .hand, .second-hand{
+    transition: transform 0.2s cubic-bezier(.4,2.3,.6,1);
+  }

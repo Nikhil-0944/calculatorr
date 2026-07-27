@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="timema.css">
+    <script src="cloc.js" defer></script>
+</head>
+<body>
+
+    <div class="stage">
+        <div class="clock-wrap">
+            <div class="dial"></div>
+            <svg class="face" viewbox="0 0 380 380" aria-hidden="true">
+                <g id="ticks"></g>
+                <text x="190" y="120" class="numeral">12</text>
+                <text x="285" y="190" class="numeral">3</text>
+                <text x="190" y="262" class="numeral">6</text>
+                <text x="95" y="190" class="numeral">9</text>
+            </svg>
+            <div class="hand hour" id="hour"></div>
+            <div class="hand minute" id="minute"></div>
+            <div class="hand second" id="second"></div>
+            <div class="pin"></div>
+        </div>
+    </div>
+    <div>
+        <button><a href="clock2.html"> Digital Clock</a></button>
+    </div>
+</body>
+</html>

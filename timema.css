@@ -1,0 +1,101 @@
+:root{
+    --brass: #c9a668;
+    --brass-dim: #6b5c42;
+    --dial-bg: #3a332b;
+    --face-ivory: #ece3d2;
+    --hand-color: #e9dfc9;
+    --second-color: #b5432f;
+}
+body{
+    height: 500px;
+    width: 500px;
+    margin-left: 450px;
+    margin-top: 130px;
+    align-items: center;
+}
+.stage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 20px;
+    background: #1c1a17;
+}
+
+.clock-wrap{
+    position: relative;
+    width: min(72vw, 380px);
+    height: min(72vw, 380px);
+    border-radius: 50%;
+    background-color: rgb(42, 38, 34);
+    box-shadow: 0 0 0 6px var(--brass-dim), 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.dial{
+    position: absolute;
+    inset: 14px;
+    border-radius: 200px; 
+    background: radial-gradient(circle at 35% 30%, var(--dial-bg), #241f1a 80%);
+}
+
+svg.face{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.tick-major{ stroke: var(--brass); stroke-width:2.2; }
+
+.tick-minor{ stroke: var(--brass-dim); stroke-width:1; }
+
+.numeral{
+    font-size: 26px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    fill: var(--face-ivory);
+    text-anchor: middle;
+}
+
+.hand{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 6px;
+    transform-origin: 50% 100%;
+    background-color: var(--hand-color);
+}
+
+.hour{
+    width: 8px;
+    height: 50px;
+    margin-left: -4px;
+    background-color: var(--hand-color);
+}
+
+.minute{
+    width: 5px;
+    height: 36%;
+    margin-left: -2.5px;
+    border-radius: 3px 3px 2px 2px;
+    background-color: var(--hand-color);
+}
+
+.second{
+    width: 2px;
+    height: 40%;
+    margin-left: -1px;
+    background-color: var(--second-color);
+}
+
+.pin{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    margin-top: -7px;
+    border-radius: 50%;
+    background-color: var(--brass);
+    z-index: 10;
+}
